@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+	int n,i,j,sum=0;
+	printf("enter range");
+	scanf("%d",&n);
+	int p[50];
+	printf("enter values");
+	for (i=0;i<n;i++)
+	{
+		scanf("%d",&p[i]);
+	}
+	for (i=0;i<n;i++)
+	{
+		sum=0;
+		for (j=1;j<p[i];j++)
+		{
+			if (p[i]%j==0)
+			{
+				sum=sum+j;
+			}
+		}
+		if (sum==p[i])
+		printf("%d",p[i]);
+	}
+}
