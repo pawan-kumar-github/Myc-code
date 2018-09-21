@@ -1,0 +1,31 @@
+#include<stdio.h>
+int fact(int r)
+{
+	int i, fact1 = 1;
+	for (i = 1; i <= r; i++)
+	{
+		fact1 = fact1 * i;
+	}
+	return fact1;
+}
+
+void main()
+{
+	int n, k, a,c;
+	int t1, t2, t3;
+	float result = 0;
+	printf("enter n and k");
+	scanf("%d%d", &n, &k);
+	if (n < k)
+	{
+		a = n;
+		n = k;
+		k = a;
+	}
+	 c = (n - k);
+	t1 = fact(n);
+	t2 = fact(k);
+	t3 = fact(c);
+	result = t1 / (t2 * t3);
+	printf("the results is %d\n", result);
+}
